@@ -45,6 +45,7 @@ class WebSpider(CrawlSpider):
                 print "Missing field 'product_name' on config input file! Please Check!"
             yield item
 
+    # Extract data
     @staticmethod
     def extract_data(self, response, key, xpath_config, re_config, python_config):
         data = None
