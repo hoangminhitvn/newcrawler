@@ -4,14 +4,8 @@ from crawler.utils.moduleimport import *
 class FormatData:
     @staticmethod
     def description(self, input_value):
-        results = []
         if isinstance(input_value, list):
-            for v in input_value:
-                if v.endswith("."):
-                    results.append(v)
-                else:
-                    results.append(v + ".")
-        return ' '.join(results)
+            return ' '.join(input_value)
 
     @staticmethod
     def title(self, input_value):
