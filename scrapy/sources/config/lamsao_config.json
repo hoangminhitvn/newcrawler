@@ -1,0 +1,50 @@
+{
+  "start_urls": [
+    "http://www.lamsao.com/"
+  ],
+  "rules": [
+    {
+      "allow": [
+        ".*"
+      ],
+      "restrict_xpaths": [
+        "//ul[@id='cate-bot']/li[@class='item ']/ul/li/a",
+        "//a[@class='CSSClassLinkActive']"
+      ],
+      "follow": true
+    },
+    {
+      "allow": [
+        ".*"
+      ],
+      "restrict_xpaths": [
+        "//h3[@class='title']/a"
+      ],
+      "use_content": true
+    }
+  ],
+  "fields": {
+    "title": {
+      "xpath": "//h1[@class='newsTitle']//text()"
+    },
+    "description": {
+      "xpath": [
+        "//div[@class='newsDescription']/h2//text()",
+        "//div[@class='floor']//div[@class='header']/div[@class='titleInstruction']//text()",
+        "//div[@class='floor']//div[@class='detailContent']//text()"
+      ]
+    },
+    "images": {
+      "xpath": [
+        "//div[@class='newsImage']/img/@src",
+        "//div[@class='floor']//div[@class='detailContent']//img/@src"
+      ]
+    },
+    "categories": {
+      "xpath": "//div[@class='navigateBox']//a//text()"
+    },
+    "url": {
+      "xpath": "//meta[@property='og:url']/@content"
+    }
+  }
+}
