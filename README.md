@@ -5,30 +5,30 @@ Scrapy NewCrawler Project Readme
 ```
 Create Environment run scrapy
 ```
-Using virtualenv.\n
-Install virtualenv: $pip install virtualenv\n
-Create environment: $virtualenv env_linux (with env_linux is name virtualenv created in Linux machine)\n
+Using virtualenv.
+Install virtualenv: $pip install virtualenv
+Create environment: $virtualenv env_linux (with env_linux is name virtualenv created in Linux machine)
 
 ```
 Activate virtualenv
 ```
-Activate virtualenv on Linux/Mac OS: $source env_linux/bin/activate\n
-Activate virtualenv on Windows     : >. env_linux\Script\activate\n
-Result after activate: (env_linux)$\n
+Activate virtualenv on Linux/Mac OS: $source env_linux/bin/activate
+Activate virtualenv on Windows     : >. env_linux\Script\activate
+Result after activate: (env_linux)$
 
 ```
 Install Scrapy
 ```
-Install scrapy on virtualenv: (env_linux)$pip install -r requirement.txt\n
+Install scrapy on virtualenv: (env_linux)$pip install -r requirement.txt
 
 
 ```
 Run Scrapy
 ```
-Run scrapy: $scrapy crawl web -a config_fil=sources/config/<name_config_file> -o output/<name_output_file>\n
-Example: $scrapy crawl web -a config_file=sources/config/baoboi_config.json -o output/baobao_output.json\n
+Run scrapy: $scrapy crawl web -a config_fil=sources/config/<name_config_file> -o output/<name_output_file>
+Example: $scrapy crawl web -a config_file=sources/config/baoboi_config.json -o output/baobao_output.json
 
 ```
 Deactivate virtualenv
 ```
-Deactivate virtualenv: $deactivate\n
+Deactivate virtualenv: $deactivate
