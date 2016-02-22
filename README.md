@@ -26,7 +26,7 @@ Install scrapy on virtualenv: (env_linux)$pip install -r requirement.txt
 Run Scrapy
 ```
 Run scrapy: $scrapy crawl web -a config_fil=sources/config/<name_config_file> -o output/<name_output_file>
-Example: $scrapy crwal web -a config_file=sources/config/baoboi_config.json -o output/baobao_output.json
+Example: $scrapy crawl web -a config_file=sources/config/baoboi_config.json -o output/baobao_output.json
 
 ```
 Deactivate virtualenv
