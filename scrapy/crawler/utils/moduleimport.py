@@ -22,6 +22,7 @@ import locale
 import traceback
 
 from crawler.supportclient.cocvu import *
+from crawler.supportclient.khothuthuat import *
 
 
 
