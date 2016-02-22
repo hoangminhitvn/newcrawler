@@ -50,12 +50,17 @@ class WebSpider(CrawlSpider):
     def extract_data(self, response, key, xpath_config, re_config, python_config):
         data = None
         if isinstance(xpath_config, unicode):
-            xpath_config = xpath_config.encode('utf-8', 'ignore')
-            if re_config:
-                data = response.xpath(xpath_config).re(re_config)
-            else:
-                data = response.xpath(xpath_config).extract()
+            try:
+                xpath_config = xpath_config.encode('utf-8', 'ignore')
+                if re_config:
+                    data = response.xpath(xpath_config).re(re_config)
+                else:
+                    data = response.xpath(xpath_config).extract()
+            except Exception as e:
+                print e
+
         elif isinstance(xpath_config, list):
+
             data = []
             for xpath_c in xpath_config:
                 if re_config:

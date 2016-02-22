@@ -1,0 +1,33 @@
+{
+  "base_url": "http://cocvu.com",
+  "start_urls": [
+    "http://cocvu.com/category/thu-thuat/"
+  ],
+  "rules": [
+    "Rule(lxml(allow=('.*',), restrict_xpaths=(\"//div[@class='archive-pagination pagination']//a\")), follow=True)",
+    "Rule(lxml(allow=('.*',), restrict_xpaths=(\"//h2[@class='entry-title']/a\")), callback='parse_product')"
+  ],
+  "fields": {
+    "product_name": "cocvu",
+    "title": {
+      "xpath": "//h1[@class='entry-title']//text()"
+    },
+    "description": {
+      "xpath": "//div[@class='entry-content']/*[not(@style)][not(@id)]//text()",
+      "re": "\\w.*",
+      "python": "cocvu.description(data)"
+    },
+    "post_date": {
+      "xpath": "//header[@class='entry-header']/p[@class='entry-meta']/time[@class='entry-time']//text()"
+    },
+    "image_urls": {
+      "xpath": "//div[@class='entry-content']//img/@src"
+    },
+    "categories": {
+      "xpath": "//div[@class='breadcrumb']//a/span//text()"
+    },
+    "tags": {
+      "xpath": "//span[@class='entry-tags']/a//text()"
+    }
+  }
+}

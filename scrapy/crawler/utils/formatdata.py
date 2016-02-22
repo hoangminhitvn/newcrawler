@@ -6,6 +6,8 @@ class FormatData:
     def description(self, input_value):
         if isinstance(input_value, list):
             return ' '.join(input_value)
+        elif isinstance(input_value, unicode):
+            return input_value.encode('utf-8', 'ignore')
 
     @staticmethod
     def title(self, input_value):

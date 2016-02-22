@@ -21,8 +21,7 @@ import unicodedata
 import locale
 import traceback
 
-
-
+from crawler.supportclient.cocvu import *
 
 
 
