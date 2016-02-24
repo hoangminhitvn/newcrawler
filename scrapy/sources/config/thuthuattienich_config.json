@@ -14,8 +14,7 @@
       "xpath": "///h1[@class='name post-title entry-title']/span//text()"
     },
     "description": {
-      "xpath": "//div[@class='post-inner']/div[@class='entry']/div[2]/following-sibling::*//span//text()",
-      "re": "\\w.*"
+      "xpath": "//div[@class='post-inner']/div[@class='entry']/div[2]/following-sibling::*//span"
     },
     "post_date": {
       "xpath": "//article[@id='the-post']/div[@class='post-inner']/p[@class='post-meta']/span[@class='tie-date']//text()"
@@ -24,7 +23,7 @@
       "xpath": "//div[@class='post-inner']/div[@class='entry']//img/@src"
     },
     "categories": {
-      "xpath": "//div[@id='crumbs']//a//text()"
+      "xpath": "//div[@id='crumbs']//span[position()>2]/a//text()"
     },
     "tags": {
       "xpath": "//div[@class='content']/p[@class='post-tag']/a//text()"

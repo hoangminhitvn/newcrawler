@@ -14,11 +14,9 @@
     },
     "description": {
       "xpath": [
-        "//div[@class='post-single-content box mark-links entry-content']/p[1]//text()",
-        "//div[@class='post-single-content box mark-links entry-content']/div[@class='rpbt_shortcode']/following-sibling::*//text()"
-      ],
-      "re": "\\w.*",
-      "python": "filter(lambda x: x!= 'adsbygoogle = window.adsbygoogle || []).push({});\\r', data)"
+        "//div[@class='post-single-content box mark-links entry-content']/p[1]",
+        "//div[@class='post-single-content box mark-links entry-content']/div[@class='rpbt_shortcode']/following-sibling::*[not(self::div[@class='bottomad'])][not(self::div[@class='dmca-badge'])]"
+      ]
     },
     "post_date": {
       "xpath": "//div[@class='single_post']/header/div[@class='post-info']/span[@class='thetime updated']//text()"
@@ -28,7 +26,7 @@
       "re": "http.*"
     },
     "categories": {
-      "xpath": "//div[@class='single_post']/div[@class='breadcrumb']//a//text()"
+      "xpath": "//div[@class='single_post']/div[@class='breadcrumb']/div[position()>2]/a//text()"
     },
     "tags": {
       "xpath": "//div[@class='single_post']/header/div[@class='post-info']/span[@class='thetags']/a//text()"

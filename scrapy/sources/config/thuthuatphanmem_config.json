@@ -13,16 +13,16 @@
       "xpath": "//h1//text()"
     },
     "description": {
-      "xpath": "//div[@class='content']//text()"
+      "xpath": "//div[@class='content']"
     },
     "post_date": {
-      "xpath": "//span[@class='post-meta']/text()[2]"
+      "xpath": "substring-after(//span[@class='post-meta']/text()[2], ', ')"
     },
     "image_urls": {
       "xpath": "//div[@class='content']//img/@src"
     },
     "categories": {
-      "xpath": "//div[@class='main-breadcrumb']//a//text()"
+      "xpath": "//div[@class='main-breadcrumb']/div[position()>1]//a//text()"
     }
   }
 }

@@ -13,8 +13,7 @@
       "xpath": "//h1[@class='post-title']/a//text()"
     },
     "description": {
-      "xpath": "//div[@class='content']/*[not(@style)][not(div)]//text()",
-      "re": "\\w.*"
+      "xpath": "//div[@class='content']/*[not(@style)][not(div)]"
     },
     "post_date": {
       "xpath": "//div[@class='post']/p[@class='post-info']/span[@class='time']//text()"

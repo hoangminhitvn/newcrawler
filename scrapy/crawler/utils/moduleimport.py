@@ -3,6 +3,9 @@ from scrapy.contrib.linkextractors.lxmlhtml import LxmlLinkExtractor
 from scrapy.selector import HtmlXPathSelector
 from scrapy.selector.unified import SelectorList
 from scrapy.contrib.linkextractors.lxmlhtml import LxmlLinkExtractor as lxml
+# import lxml
+from lxml.html.clean import clean_html
+import lxml.html.clean as clean
 
 from scrapy import FormRequest
 from scrapy import Request
@@ -13,6 +16,7 @@ from urlparse import urljoin
 
 from crawler.items import *
 from crawler.utils.formatdata import *
+from crawler.utils.html_string import *
 
 import os
 import json
@@ -23,6 +27,7 @@ import traceback
 
 from crawler.supportclient.cocvu import *
 from crawler.supportclient.khothuthuat import *
+
 
 
 

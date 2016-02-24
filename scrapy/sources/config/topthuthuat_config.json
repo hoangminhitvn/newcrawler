@@ -13,7 +13,7 @@
       "xpath": "//h1//text()"
     },
     "description": {
-      "xpath": "//div[@class='floatbox']/div[@class='pos-content']/div[contains(@class, 'element-textarea')]/*//text()"
+      "xpath": "//div[@class='floatbox']/div[@class='pos-content']/div[contains(@class, 'element-textarea')]"
     },
     "post_date": {
       "xpath": "substring-after(normalize-space(substring-before(//p[@class='pos-meta'], '.')),' ')"
@@ -22,7 +22,7 @@
       "xpath": "//div[@class='pos-content']/div[@class='element element-textarea first last']/p/img/@src"
     },
     "categories": {
-      "xpath": "//ul[@class='uk-breadcrumb']//text()"
+      "xpath": "//ul[@class='uk-breadcrumb']/li[position()>1]//text()"
     }
   }
 }

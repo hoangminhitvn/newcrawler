@@ -78,7 +78,7 @@ class WebSpider(CrawlSpider):
 
         if key == 'description':
             return FormatData.description(self=self, input_value=data)
-        elif key == 'title':
+        if key == 'title':
             return FormatData.title(self=self, input_value=data)
         elif key == 'image_urls':
             return FormatData.image_urls(self=self, input_value=data)
@@ -86,5 +86,7 @@ class WebSpider(CrawlSpider):
             return FormatData.post_date(self=self, input_value=data)
         elif key == 'categories':
             return FormatData.categories(self=self, input_value=data)
+        elif key == 'tags':
+            return FormatData.tags(self=self, input_value=data)
         else:
             return data

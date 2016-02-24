@@ -1,13 +1,17 @@
-from crawler.utils.moduleimport import *
-
+from crawler.utils.html_string import *
 
 class FormatData:
     @staticmethod
     def description(self, input_value):
+
+        results = []
         if isinstance(input_value, list):
-            return ' '.join(input_value)
+            for input_v in input_value:
+                results.append(remove_tags(input_v))
+            return ' '.join(results)
+
         elif isinstance(input_value, unicode):
-            return input_value.encode('utf-8', 'ignore')
+            return remove_tags(input_value)
 
     @staticmethod
     def title(self, input_value):
@@ -30,9 +34,14 @@ class FormatData:
                 else:
                     results.append(self.base_url + url)
 
-            return results
+            return '; '.join(results)
 
     @staticmethod
     def categories(self, input_value):
         if isinstance(input_value, list):
-            return '/'.join(input_value)
+            return '; '.join(input_value)
+
+    @staticmethod
+    def tags(self, input_value):
+        if isinstance(input_value, list):
+            return '; '.join(input_value)

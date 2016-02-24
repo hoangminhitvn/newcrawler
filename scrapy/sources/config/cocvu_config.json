@@ -13,8 +13,7 @@
       "xpath": "//h1[@class='entry-title']//text()"
     },
     "description": {
-      "xpath": "//div[@class='entry-content']/*[not(@style)][not(@id)]//text()",
-      "re": "\\w.*",
+      "xpath": "//div[@class='entry-content']/*[not(@style)][not(@id)]",
       "python": "cocvu.description(data)"
     },
     "post_date": {
@@ -24,7 +23,7 @@
       "xpath": "//div[@class='entry-content']//img/@src"
     },
     "categories": {
-      "xpath": "//div[@class='breadcrumb']//a/span//text()"
+      "xpath": "//div[@class='breadcrumb']//span[position()>2]/a/span//text()"
     },
     "tags": {
       "xpath": "//span[@class='entry-tags']/a//text()"

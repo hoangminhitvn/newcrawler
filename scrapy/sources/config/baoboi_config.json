@@ -13,8 +13,7 @@
       "xpath": "//h1[@class='entry-title']//text()"
     },
     "description": {
-      "xpath": "//div[@class='td-post-content']/div[1]/following-sibling::*[not(./script)]//text()",
-      "re": "\\w.*"
+      "xpath": "//div[@class='td-post-content']/div[1]/following-sibling::*[not(./script) and not(.//@async)]"
     },
     "post_date": {
       "xpath": "//header[@class='td-post-title']//time[@class='entry-date updated td-module-date']//text()"
@@ -23,7 +22,7 @@
       "xpath": "//div[@class='td-post-content']//img/@src"
     },
     "categories": {
-      "xpath": "//div[@class='entry-crumbs']//a[@class='entry-crumb']/span//text()"
+      "xpath": "//div[@class='entry-crumbs']/span[position()>1]/a[@class='entry-crumb']/span//text()"
     },
     "tags": {
       "xpath": "//ul[@class='td-tags td-post-small-box clearfix']/li/a//text()"

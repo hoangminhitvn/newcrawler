@@ -13,9 +13,7 @@
       "xpath": "//h1[@class='post-title item fn']//text()"
     },
     "description": {
-      "xpath": "//div[@itemprop='articleBody']/*[not(@id)][not(contains(./@class, 'tagcloud'))]//text()",
-      "re": "\\w.*",
-      "python": "khothuthuat.description(data)"
+      "xpath": "//div[@itemprop='articleBody']/*[not(contains(./@class, 'tagcloud'))][not(contains(./@class, 'ads'))][not(self::strong)]"
     },
     "post_date": {
       "xpath": "//span[@class='posted-on']/span[@class='dtreviewed']/time[@class='value-title']//text()"
@@ -24,7 +22,7 @@
       "xpath": "//div[@class='post-content description ']//img/@src"
     },
     "categories": {
-      "xpath": "//div[@class='breadcrumbs']/span/a/span//text()"
+      "xpath": "//div[@class='breadcrumbs']/span[position()>2]/a/span//text()"
     },
     "tags": {
       "xpath": "//div[@class='post-content description ']/div[@class='tagcloud']/a//text()"

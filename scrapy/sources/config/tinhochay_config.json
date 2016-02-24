@@ -20,14 +20,10 @@
       "xpath": "//h1[@class='name post-title entry-title']/span//text()"
     },
     "description": {
-      "xpath": [
-        "//article[@id='the-post']/div[@class='post-inner']/div[@class='entry']/p/span//text()",
-        "//article[@id='the-post']/div[@class='post-inner']/div[@class='entry']/p/text()"
-      ],
-      "re": "\\w.*"
+      "xpath": "//article[@id='the-post']/div[@class='post-inner']/div[@class='entry']/p[not(contains(./script/@type, 'text/javascript'))]"
     },
     "post_date": {
-      "xpath": "//div[@class='post-inner']/p[@class='post-meta']/span[@class='tie-date']//text()"
+      "xpath": "//meta[@property='article:published_time']/@content"
     },
     "image_urls": {
       "xpath": "//article[@id='the-post']/div[@class='post-inner']/div[@class='entry']//img/@src"
