@@ -1,14 +1,28 @@
 from crawler.utils.html_string import *
+import re
+
 
 class FormatData:
     @staticmethod
     def description(self, input_value):
 
-        results = []
+        html_desc = None
+        html_desc_list = []
         if isinstance(input_value, list):
             for input_v in input_value:
-                results.append(remove_tags(input_v))
-            return ' '.join(results)
+                html_desc_list.append(remove_tags(input_v))
+                html_desc = ' '.join(html_desc_list)
+
+            src_url_short = re.findall("src=\"(/\\w+/[^\"]+)", html_desc)
+            src_url_full = add_base_url_to_src(base_url=self.base_url, input_html=html_desc)
+
+            if len(src_url_short) > 0:
+                for i in src_url_short:
+                    for j in src_url_full:
+                        if i in j:
+                            html_desc = html_desc.replace(i, j)
+
+            return html_desc
 
         elif isinstance(input_value, unicode):
             return remove_tags(input_value)
