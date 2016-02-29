@@ -16,6 +16,9 @@
     "description": {
       "xpath": "//div[@class='post-inner']/div[@class='entry']/div[2]/following-sibling::*//span"
     },
+    "description_urls": {
+      "xpath": "//div[@class='post-inner']/div[@class='entry']/div[2]/following-sibling::*//span//a/@href"
+    },
     "post_date": {
       "xpath": "//article[@id='the-post']/div[@class='post-inner']/p[@class='post-meta']/span[@class='tie-date']//text()"
     },

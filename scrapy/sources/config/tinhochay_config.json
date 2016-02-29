@@ -22,6 +22,9 @@
     "description": {
       "xpath": "//article[@id='the-post']/div[@class='post-inner']/div[@class='entry']/p[not(contains(./script/@type, 'text/javascript'))]"
     },
+    "description_urls": {
+      "xpath": "//article[@id='the-post']/div[@class='post-inner']/div[@class='entry']/p[not(contains(./script/@type, 'text/javascript'))]//a/@href"
+    },
     "post_date": {
       "xpath": "//meta[@property='article:published_time']/@content"
     },

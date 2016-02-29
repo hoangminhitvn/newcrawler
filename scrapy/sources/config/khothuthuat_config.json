@@ -15,6 +15,9 @@
     "description": {
       "xpath": "//div[@itemprop='articleBody']/*[not(contains(./@class, 'tagcloud'))][not(contains(./@class, 'ads'))][not(self::strong)]"
     },
+    "description_urls": {
+      "xpath": "//div[@itemprop='articleBody']/*[not(contains(./@class, 'tagcloud'))][not(contains(./@class, 'ads'))][not(self::strong)]//a/@href"
+    },
     "post_date": {
       "xpath": "//span[@class='posted-on']/span[@class='dtreviewed']/time[@class='value-title']//text()"
     },

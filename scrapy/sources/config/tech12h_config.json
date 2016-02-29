@@ -18,6 +18,12 @@
         "//div[@class='views-row views-row-1 views-row-odd views-row-first views-row-last']/div[@class='views-field views-field-body']"
       ]
     },
+    "description_urls": {
+      "xpath": [
+        "//div[@class='views-row views-row-1 views-row-odd views-row-first views-row-last']/div[@class='views-field views-field-field-mota-1']//a/@href",
+        "//div[@class='views-row views-row-1 views-row-odd views-row-first views-row-last']/div[@class='views-field views-field-body']//a/@href"
+      ]
+    },
     "post_date": {
       "xpath": "//div[@class='author']/span[2]//text()",
       "re": "[0-9].*"

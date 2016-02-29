@@ -15,6 +15,9 @@
     "description": {
       "xpath": "//div[@class='content']"
     },
+    "description_urls": {
+      "xpath": "//div[@class='content']//a/@href"
+    },
     "post_date": {
       "xpath": "substring-after(//span[@class='post-meta']/text()[2], ', ')"
     },

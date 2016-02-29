@@ -88,5 +88,7 @@ class WebSpider(CrawlSpider):
             return FormatData.categories(self=self, input_value=data)
         elif key == 'tags':
             return FormatData.tags(self=self, input_value=data)
+        elif key == 'description_urls':
+            return FormatData.description_url(self=self, input_value=data)
         else:
             return data

@@ -15,6 +15,9 @@
     "description": {
       "xpath": "//div[@class='floatbox']/div[@class='pos-content']/div[contains(@class, 'element-textarea')]"
     },
+    "description_urls": {
+      "xpath": "//div[@class='floatbox']/div[@class='pos-content']/div[contains(@class, 'element-textarea')]//a/@href"
+    },
     "post_date": {
       "xpath": "substring-after(normalize-space(substring-before(//p[@class='pos-meta'], '.')),' ')"
     },

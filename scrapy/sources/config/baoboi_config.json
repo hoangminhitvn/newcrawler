@@ -15,6 +15,9 @@
     "description": {
       "xpath": "//div[@class='td-post-content']/div[1]/following-sibling::*[not(./script) and not(.//@async)]"
     },
+    "description_urls": {
+      "xpath": "//div[@class='td-post-content']/div[1]/following-sibling::*[not(./script) and not(.//@async)]//a/@href"
+    },
     "post_date": {
       "xpath": "//header[@class='td-post-title']//time[@class='entry-date updated td-module-date']//text()"
     },
